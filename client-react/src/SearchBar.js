@@ -44,7 +44,8 @@ const SearchBar = () => {
     };
 
     const fetchData = async () => {
-        const response = await fetch('http://localhost:3001/search/'+searchInput)
+        const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?q='+searchInput)
+        console.log(response)
         const data = await response.json()
         return data
       }
@@ -64,7 +65,7 @@ const SearchBar = () => {
             type="search"
             placeholder="Search here"
             onChange={handleChange}
-            value={searchInput} />
+            value={searchInput}/>
         <Link to="/itemList">
             <button onClick={onPress}>Search</button>
         </Link>

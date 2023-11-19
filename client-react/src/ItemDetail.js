@@ -61,13 +61,13 @@ const ItemDetails = () => {
   }
 
   useEffect(() => {
-    fetch('http://localhost:3001/item/' + id)
+    fetch('https://api.mercadolibre.com/items/' + id)
     .then((response) => response.json())
     .then((data) => {
       const sortedData = sortData(data)
       setNewData(sortedData)
     })
-    fetch('http://localhost:3001/description/' + id)
+    fetch('https://api.mercadolibre.com/items/' + id + '/description')
     .then((response) => response.json())
     .then((description) => setDescription(description.plain_text))
     setIsLoading(false)
