@@ -1,8 +1,8 @@
-import SearchBar from './SearchBar'
-import { SearchProvider } from './SearchContext'
+import SearchBar from './components/SearchBar'
+import { SearchProvider } from './context/SearchContext'
 import Home from './Home'
-import ItemList from './ItemsList'
-import ItemDetail from './ItemDetail'
+import ItemList from './screens/ItemList'
+import ItemDetail from './screens/ItemDetail'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.scss';
 
